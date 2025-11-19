@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  proxy:
+    build: .
+    env_file:
+      - .env.example
+    environment:
+      AI_ENDPOINT_URL: http://mock-ai:9000/analyse
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mock-ai
+  mock-ai:
+    build: .
+    command: uvicorn scripts.mock_ai:app --host 0.0.0.0 --port 9000
+    ports:
+      - "9000:9000"

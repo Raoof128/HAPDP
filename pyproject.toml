@@ -1,0 +1,30 @@
+[project]
+name = "fhir-privacy-proxy"
+version = "0.1.0"
+description = "FHIR-aware privacy proxy that sanitises healthcare payloads before AI analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Healthcare Privacy Team"}]
+dependencies = [
+    "fastapi==0.110.0",
+    "uvicorn==0.29.0",
+    "httpx==0.26.0",
+    "PyYAML==6.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.1.1",
+    "pytest-asyncio==0.23.8",
+    "ruff==0.5.6",
+    "black==24.10.0",
+    "pre-commit==3.8.0",
+    "mypy==1.10.0",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+

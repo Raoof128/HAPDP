@@ -1,0 +1,22 @@
+{
+  "resourceType": "Patient",
+  "id": "example-patient",
+  "name": [],
+  "birthDate": "REDACTED",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/medicare",
+      "value": "916746c00070144beef86ba365c40741059e05ec7b96b8d23da4a3bc6bea1cf1"
+    },
+    {
+      "system": "http://hospital.example.org/mrn",
+      "value": "3833d8926bdc997a239e2921e2d840157d0fe6e97d6ad58e13aafca190616b20"
+    }
+  ],
+  "telecom": [],
+  "address": [],
+  "contact": [],
+  "managingOrganization": {
+    "reference": "**************************inic"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "hash_salt": "demo-salt",
+  "redact_fields": [
+    "Patient.name",
+    "Patient.address",
+    "Patient.telecom",
+    "Patient.birthDate",
+    "Patient.contact",
+    "Observation.subject",
+    "Encounter.subject",
+    "Condition.subject"
+  ],
+  "hash_fields": [
+    "Patient.identifier.value",
+    "*.identifier.value"
+  ],
+  "mask_fields": [
+    {
+      "path": "Patient.managingOrganization.reference",
+      "visible": 4,
+      "mask_char": "*"
+    }
+  ]
+}
